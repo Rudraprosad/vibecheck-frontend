@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: 'https://vibecheck-backend-yg08.onrender.com/api',
 });
 
 // Intercept requests to add the Authorization header
