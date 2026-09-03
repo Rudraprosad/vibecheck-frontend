@@ -1,0 +1,74 @@
+
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E9D5FF;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.trust-badge--compact {
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  gap: 6px;
+}
+
+.trust-badge__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trust-badge__name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trust-badge__name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #2E1065;
+  letter-spacing: -0.02em;
+}
+
+.trust-badge__handle {
+  font-size: 0.8125rem;
+  color: #7E22CE;
+}
+
+.trust-badge__handle-sm {
+  font-size: 0.75rem;
+  color: #7E22CE;
+}
+
+.trust-badge__stats {
+  display: flex;
+  gap: 16px;
+  margin-left: auto;
+  padding-left: 16px;
+  border-left: 1px solid #E9D5FF;
+}
+
+.trust-badge__stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.trust-badge__stat-val {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #2E1065;
+}
+
+.trust-badge__stat-label {
+  font-size: 0.75rem;
+  color: #7E22CE;
+}

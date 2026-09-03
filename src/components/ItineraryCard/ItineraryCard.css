@@ -1,0 +1,264 @@
+
+.icard {
+  cursor: pointer;
+  transition: border-color 150ms ease, transform 150ms ease, box-shadow 200ms ease;
+  user-select: none;
+}
+
+.icard:hover {
+  transform: translateY(-2px);
+}
+
+.icard:focus-visible {
+  outline: 2px solid #B89ADC;
+  outline-offset: 2px;
+}
+
+/* ---- Grid Card ---- */
+.icard--grid {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.icard__header {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.icard__header-bg-text {
+  position: absolute;
+  bottom: -8px;
+  left: 12px;
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: rgba(255,255,255,0.06);
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.icard__header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.icard__header-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(184, 154, 220, 0.4);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.icard__header-rating-val {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2E1065;
+}
+
+.icard__grid-content {
+  flex: 1;
+}
+
+.icard__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #2E1065;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.icard__destination {
+  font-size: 0.8125rem;
+  color: #7E22CE;
+  margin-bottom: 12px;
+}
+
+.icard__stats {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.icard__stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.75rem;
+  color: #7E22CE;
+}
+
+.icard__contributor {
+  font-size: 0.75rem;
+  color: #7E22CE;
+}
+
+.icard__contributor strong {
+  color: #581C87;
+  font-weight: 600;
+}
+
+.icard__verified {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  background: #B89ADC;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  color: white;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.icard__grid-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* ---- List Card ---- */
+.icard--list {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.icard__strip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+}
+
+.icard__list-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 16px 16px 16px 20px !important;
+  flex: 1;
+  min-width: 0;
+}
+
+.icard__initial {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.icard__list-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.icard__list-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.icard__meta {
+  font-size: 0.8125rem;
+  color: #7E22CE;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.icard__dot {
+  color: #D8B4FE;
+}
+
+.icard__rating-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.icard__rating-val {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #2E1065;
+}
+
+.icard__review-count {
+  font-size: 0.75rem;
+  color: #7E22CE;
+}
+
+.icard__list-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.icard__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.icard__clone-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.icard__clone-count {
+  font-size: 0.75rem;
+  color: #A855F7;
+}
+
+.icard__list-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-right: 4px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .icard__list-top {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .icard__list-actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .icard__initial {
+    display: none;
+  }
+}

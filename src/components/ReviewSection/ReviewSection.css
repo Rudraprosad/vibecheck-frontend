@@ -1,0 +1,33 @@
+.review-section {
+  margin-top: 40px;
+  padding: 32px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: #FAFAFA;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  border: 1px solid #F3F4F6;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+}

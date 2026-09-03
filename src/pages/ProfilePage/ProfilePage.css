@@ -1,0 +1,250 @@
+
+
+.profile {
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.profile__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 40px;
+  padding-bottom: 64px;
+  max-width: 860px;
+}
+
+/* ── Profile Card ── */
+.profile__card {
+  background: #FFFFFF;
+  border: 1px solid #E9D5FF;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.profile__card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 28px;
+}
+
+.profile__avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.profile__fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.profile__read-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 14px;
+  background: #FFFFFF;
+  border: 1px solid #E9D5FF;
+  border-radius: 8px;
+}
+
+.profile__read-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #A855F7;
+}
+
+.profile__read-value {
+  font-size: 0.9375rem;
+  color: #2E1065;
+  font-weight: 500;
+}
+
+.profile__read-value--muted {
+  color: #7E22CE;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.profile__card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+/* Password panel */
+.profile__pwd-panel {
+  padding: 0 28px 24px;
+}
+
+.profile__pwd-fields {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.profile__pwd-fields > * {
+  min-width: 180px;
+}
+
+/* ── Stats ── */
+.profile__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid #E9D5FF;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.profile__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 28px 20px;
+  background: #FFFFFF;
+  border-right: 1px solid #E9D5FF;
+  text-align: center;
+}
+
+.profile__stat:last-child {
+  border-right: none;
+}
+
+.profile__stat-icon {
+  margin-bottom: 2px;
+}
+
+.profile__stat-value {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #2E1065;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.profile__stat-label {
+  font-size: 0.8125rem;
+  color: #7E22CE;
+  font-weight: 500;
+}
+
+/* ── Sections ── */
+.profile__section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2E1065;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+/* Contributions grid */
+.profile__contrib-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Empty state */
+.profile__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px;
+  border: 1px dashed #E9D5FF;
+  border-radius: 12px;
+  text-align: center;
+  color: #7E22CE;
+  font-size: 0.875rem;
+}
+
+/* Reviews list */
+.profile__reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile__review-row {
+  background: #FFFFFF;
+  border: 1px solid #E9D5FF;
+  border-radius: 10px;
+  padding: 18px 20px;
+  transition: border-color 150ms ease;
+}
+
+.profile__review-row:hover {
+  border-color: #D8B4FE;
+}
+
+.profile__review-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.profile__review-target {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #B89ADC;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+}
+
+.profile__review-date {
+  font-size: 0.75rem;
+  color: #A855F7;
+  flex-shrink: 0;
+}
+
+.profile__review-text {
+  font-size: 0.875rem;
+  color: #581C87;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .profile__card-body {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .profile__avatar-col {
+    flex-direction: row;
+    gap: 16px;
+  }
+  .profile__card-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .profile__stats {
+    grid-template-columns: 1fr;
+  }
+  .profile__stat {
+    border-right: none;
+    border-bottom: 1px solid #E9D5FF;
+  }
+  .profile__stat:last-child {
+    border-bottom: none;
+  }
+  .profile__contrib-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,72 @@
+
+
+.review-card {
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid #E9D5FF;
+  border-radius: 10px;
+  transition: border-color 150ms ease;
+}
+
+.review-card:hover {
+  border-color: #D8B4FE;
+}
+
+.review-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+
+.review-card__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-card__name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #2E1065;
+  letter-spacing: -0.01em;
+}
+
+.review-card__date {
+  font-size: 0.75rem;
+  color: #A855F7;
+}
+
+.review-card__text {
+  font-size: 0.875rem;
+  color: #581C87;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.review-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-card__helpful {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: #A855F7;
+  background: none;
+  border: 1px solid #E9D5FF;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: color 150ms ease, border-color 150ms ease;
+  font-family: var(--font-sans);
+}
+
+.review-card__helpful:hover {
+  color: #581C87;
+  border-color: #D8B4FE;
+}

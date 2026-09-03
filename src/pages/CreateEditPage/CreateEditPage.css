@@ -1,0 +1,569 @@
+
+.create {
+  min-height: calc(100vh - var(--nav-height));
+}
+
+/* ── Top bar ── */
+.create__topbar {
+  border-bottom: 1px solid #E9D5FF;
+  background: #FFFFFF;
+  padding: 12px 0;
+  position: sticky;
+  top: var(--nav-height);
+  z-index: 10;
+}
+
+.create__topbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.create__back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: #7E22CE;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  padding: 6px 0;
+  flex-shrink: 0;
+  transition: color 150ms ease;
+}
+
+.create__back-btn:hover {
+  color: #2E1065;
+}
+
+.create__topbar-title {
+  flex: 1;
+}
+
+.create__topbar-title h1 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #2E1065;
+  letter-spacing: -0.02em;
+}
+
+.create__topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* ── Body ── */
+.create__body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 32px;
+  padding-top: 32px;
+  padding-bottom: 80px;
+  align-items: flex-start;
+}
+
+/* ── Form ── */
+.create__form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-width: 0;
+}
+
+.create__section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.create__section-heading {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #A855F7;
+}
+
+.create__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.create__row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.create__field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.create__label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #2E1065;
+}
+
+.create__tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ── Days ── */
+.create__days {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.create__day {
+  background: #FFFFFF;
+  border: 1px solid #E9D5FF;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.create__day-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E9D5FF;
+  gap: 8px;
+}
+
+.create__day-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #B89ADC;
+  background: rgba(184, 154, 220,0.1);
+  border: 1px solid rgba(184, 154, 220,0.2);
+  border-radius: 5px;
+  padding: 2px 8px;
+  flex-shrink: 0;
+}
+
+.create__activities {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.create__activity-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #FFFFFF;
+  border: 1px solid #E9D5FF;
+  border-radius: 8px;
+  transition: border-color 150ms ease;
+}
+
+.create__activity-row:hover {
+  border-color: #D8B4FE;
+}
+
+.create__add-activity-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #A855F7;
+  background: transparent;
+  border: 1px dashed #E9D5FF;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.create__add-activity-btn:hover {
+  color: #B89ADC;
+  border-color: #B89ADC;
+}
+
+.create__add-day-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #7E22CE;
+  background: transparent;
+  border: 1px dashed #D8B4FE;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: color 150ms ease, border-color 150ms ease, background-color 150ms ease;
+}
+
+.create__add-day-btn:hover {
+  color: #B89ADC;
+  border-color: rgba(184, 154, 220,0.4);
+  background: rgba(184, 154, 220,0.05);
+}
+
+/* ── Sidebar ── */
+.create__sidebar {
+  position: sticky;
+  top: calc(var(--nav-height) + 60px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.create__sidebar-card {
+  background: #FFFFFF;
+  border: 1px solid #E9D5FF;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.create__sidebar-heading {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #A855F7;
+  margin-bottom: 16px;
+}
+
+.create__cost-total {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.create__cost-total-val {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #2E1065;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.create__cost-total-label {
+  font-size: 0.75rem;
+  color: #7E22CE;
+}
+
+.create__cost-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.create__cost-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.create__cost-label {
+  font-size: 0.8125rem;
+  color: #7E22CE;
+}
+
+.create__cost-val {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #2E1065;
+  font-variant-numeric: tabular-nums;
+}
+
+.create__sidebar-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.create__meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: #7E22CE;
+}
+
+.create__meta-row span:last-child {
+  font-weight: 600;
+  color: #581C87;
+}
+
+.create__sidebar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── Cover photo ── */
+.create__cover-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 160px;
+  border: 1.5px dashed #3F3F46;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #111115;
+  transition: border-color 150ms ease, background 150ms ease;
+  outline: none;
+}
+
+.create__cover-dropzone:hover,
+.create__cover-dropzone:focus {
+  border-color: #6366F1;
+  background: rgba(99, 102, 241, 0.04);
+}
+
+.create__cover-dropzone--over {
+  border-color: #6366F1;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.create__dropzone-text {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #71717A;
+}
+
+.create__dropzone-sub {
+  font-size: 0.75rem;
+  color: #3F3F46;
+}
+
+.create__cover-preview {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #27272A;
+}
+
+.create__cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.create__cover-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  color: #FAFAFA;
+  transition: background 150ms ease;
+  backdrop-filter: blur(4px);
+}
+
+.create__cover-remove:hover {
+  background: rgba(239, 68, 68, 0.85);
+}
+
+.create__cover-change {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #FAFAFA;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  backdrop-filter: blur(4px);
+  transition: background 150ms ease;
+}
+
+.create__cover-change:hover {
+  background: rgba(99, 102, 241, 0.75);
+}
+
+/* ── Day photos strip ── */
+.create__day-photos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 12px 4px;
+  flex-wrap: wrap;
+}
+
+.create__day-photo-thumb {
+  position: relative;
+  width: 72px;
+  height: 56px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid #27272A;
+  transition: border-color 150ms ease;
+}
+
+.create__day-photo-thumb:hover {
+  border-color: #3F3F46;
+}
+
+.create__day-photo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.create__day-photo-remove {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.75);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #FAFAFA;
+  opacity: 0;
+  transition: opacity 150ms ease, background 150ms ease;
+}
+
+.create__day-photo-thumb:hover .create__day-photo-remove {
+  opacity: 1;
+}
+
+.create__day-photo-remove:hover {
+  background: rgba(239, 68, 68, 0.9);
+}
+
+.create__day-photo-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 56px;
+  border: 1.5px dashed #27272A;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.create__day-photo-add:hover {
+  border-color: #6366F1;
+  background: rgba(99, 102, 241, 0.06);
+}
+
+/* Secondary style for the "Add Day Photos" action button in the activity list */
+.create__add-photo-btn {
+  color: #52525B;
+  border-color: #1E1E22;
+}
+
+.create__add-photo-btn:hover {
+  color: #6366F1;
+  border-color: #6366F1;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .create__body {
+    grid-template-columns: 1fr;
+  }
+  .create__sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .create__row {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .create__row > * {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .create__topbar-inner {
+    flex-wrap: wrap;
+  }
+  .create__back-btn span {
+    display: none; /* Hide text, keep icon */
+  }
+  
+  .create__activity-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 12px;
+  }
+  
+  /* Drag Icon */
+  .create__activity-row > *:nth-child(1) {
+    display: none; 
+  }
+  /* Time */
+  .create__activity-row > *:nth-child(2) {
+    width: 100% !important;
+  }
+  /* Type */
+  .create__activity-row > *:nth-child(3) {
+    width: 100% !important;
+  }
+  /* Name */
+  .create__activity-row > *:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+  /* Location */
+  .create__activity-row > *:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+  /* Cost */
+  .create__activity-row > *:nth-child(6) {
+    width: 100% !important;
+  }
+  /* Delete Button (if present, it will just drop into the next grid cell) */
+  .create__activity-row > *:nth-child(7) {
+    justify-self: end;
+    align-self: center;
+  }
+}
